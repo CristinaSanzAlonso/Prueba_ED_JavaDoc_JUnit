@@ -31,7 +31,6 @@ public class Empleado {
     public Empleado() {
         super();
     }
-
     public String getNombre() {
         return nombre;
     }

@@ -11,7 +11,7 @@ import java.util.Objects;
 public class Empleado {
 
     private String nombre;
-    private double salario;
+    private static double salario;
 
     /**
      * Constructor con los paramentros de la clase
@@ -32,19 +32,23 @@ public class Empleado {
         super();
     }
 
-    //Métodos propios:
-
-    /**
-     * Metodo que pide dos parametros:
-     * @param nombre Es el nombre del empleado del tipo String
-     * @param salario Es el salario del empleado de tipo double
-     * @return true
-     */
-
-    public boolean empleado(String nombre, double salario) {
-        System.out.println("Mi nombre es:" + nombre + " y gano: " + salario);
-        return true;
+    public String getNombre() {
+        return nombre;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public static double getSalario() {
+        return salario;
+    }
+
+    public static void setSalario(double salario) {
+        Empleado.salario = salario;
+    }
+
+    //Métodos propios:
 
     /**
      * Metodo que calcula el aumento del salario mediante la suma del porcentaje dado en la entrada
@@ -52,7 +56,7 @@ public class Empleado {
      * @return El salario con el aumento aplicado
      */
 
-    public double aumentarSalario(double porcentaje) {
+    public static double aumentarSalario(double porcentaje) {
         return salario + (salario * porcentaje/100);
     }
 

@@ -31,6 +31,10 @@ class EmpleadoTest {
         Assertions.assertTrue(nuevoSalario > Empleado.getSalario());
     }
 
+    /**
+     * Es metodo devuelve el salario
+     */
+
     @Test
     void obtenerSalario() {
         Assertions.assertEquals(1200, Empleado.getSalario());
